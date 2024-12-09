@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Paragraph Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            padding: 15px;
+            margin: 10px 0;
+            color: white;
+            border-radius: 4px;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="addpara">Add Paragraph</button>
+
+    <script>
+        const btn1 = document.getElementById("addpara");
+        
+        btn1.addEventListener("click", () => {
+            let para = document.createElement("p");
+            para.innerHTML = "<h1>This is new paragraph</h1>";
+            para.style.backgroundColor = "black";
+            document.body.append(para);
+        });
+    </script>
+</body>
+</html>
